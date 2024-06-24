@@ -2,53 +2,113 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f2f2f2; /* Background color for the body */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 header {
     background-color: #333;
     color: white;
-    padding: 1em 0;
+    padding: 1em 20px; /* Add padding to the sides of the header text */
+    text-align: center; /* Center align the header content */
+    width: 100%; /* Ensure header spans full width */
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex; /* Use flexbox for the navigation */
+    justify-content: flex-start; /* Align items to the left */
+    padding: 0 20px; /* Add padding to the sides of the navigation */
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 1em;
-}
+    nav ul li {
+        margin-right: 20px; /* Adjust spacing between items */
+    }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
+        nav ul li.title {
+            flex: 1; /* Allow title to take remaining space */
+            text-align: center; /* Center align the title */
+        }
+
+        nav ul li.align-right {
+            margin-left: auto; /* Push right-aligned items to the right */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
 
 section {
     padding: 2em;
-}
-
-#home {
-    text-align: center;
-    background-color: #f4f4f4;
-    padding: 5em 2em;
+    margin: 20px 20px;
+    width: calc(100% - 40px); /* Adjust width to account for padding */
+    overflow: hidden; /* Clearfix for floated elements */
+    background-color: #fff; /* Background color for sections */
+    border-radius: 8px; /* Rounded corners for sections */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow for sections */
 }
 
 .project {
+    width: calc(100% / 3 - 20px);
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
     background-color: #e2e2e2;
-    padding: 1em;
-    margin: 1em 0;
+    margin: 10px;
+    border-radius: 8px;
+    display: block;
+    text-decoration: none; /* Remove underline from <a> */
+    color: inherit; /* Inherit color from parent */
+}
+
+    .project:hover {
+        transform: translateY(-5px);
+    }
+
+    .project img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .project h3 {
+        margin: 0;
+        text-align: center;
+        color: #333; /* Ensure heading inherits color */
+    }
+
+    .project p {
+        margin: 0; /* Remove default margin */
+        text-align: center;
+        color: #333; /* Set a specific color for paragraphs */
+    }
+
+    .project a {
+        text-decoration:none;
+    }
+
+@media (max-width: 768px) {
+    /* Responsive design for smaller screens */
+    .project {
+        width: calc(50% - 20px); /* 2 projects per row on smaller screens with buffer */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjust for very small screens */
+    .project {
+        width: calc(100% - 20px); /* 1 project per row on mobile with buffer */
+    }
 }
 
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 1em 0;
-    position: fixed;
+    padding: 1em 20px; /* Add padding to the sides of the footer text */
     width: 100%;
     bottom: 0;
 }

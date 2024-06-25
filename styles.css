@@ -87,7 +87,7 @@ section {
     }
 
     .project a {
-        text-decoration:none;
+        text-decoration: none;
     }
 
 @media (max-width: 768px) {
@@ -112,3 +112,29 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+/* Additional Styles for Content Sections with Alternating Alignments */
+.content-section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2em;
+}
+
+    .content-section:nth-child(odd) {
+        flex-direction: row; /* Default alignment: left */
+    }
+
+    .content-section:nth-child(even) {
+        flex-direction: row-reverse; /* Alternate alignment: right */
+    }
+
+    .content-section img {
+        max-width: 150px;
+        max-height: 150px;
+        margin: 10px;
+        border-radius: 8px;
+    }
+
+    .content-section div {
+        flex: 1;
+    }

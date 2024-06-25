@@ -3,29 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Your Name</title>
+    <title>Crowned Control</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li class="title"><b>Joren Dresselaers | Aspiring Gameplay Programmer</b></li>
-                <li class="align-right"><a href="resume.html">Resume</a></li>
-                <li class="align-right"><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Joren Dresselaers Portfolio</h1>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="title"><a href="#projects">Projects</a></li>
+            <li class="align-right"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Crowned Control</h2>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Information about yourself, your career goals, and interests.</p>
+        <div class="content-section">
+            <img src="../images/image1.jpg" alt="Project Image 1">
+            <div>
+                <p><strong>Project Duration:</strong></p>
+                <ul>
+                    <li>11 weeks</li>
+                    <li>10 hours of work per week</li>
+                </ul>
+                <p><strong>Engine:</strong> Unity</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <img src="../images/image1.jpg" alt="Project Image 2">
+            <div>
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="https://itch.io">Itch.io</a></li>
+                    <li><a href="https://store.steampowered.com">Steam</a></li>
+                    <li><a href="https://www.therookies.co">The Rookies</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <img src="../images/image1.jpg" alt="Project Image 3">
+            <div>
+                <h3>What is it?</h3>
+                <p>This is a project in which I worked together with four other students. The theme of the course was 'couch co-op', so we decided on the relatively simple theme of a 4-player Free-For-All with a twist.</p>
+                <p>The goal of the game is to obtain and keep a ghostly crown for as long as possible. Doing so turns the you into a ghost yourself and gives your knight some unique abilities, which you must use to avoid the other players. The knights on the other hand, can collect items from chests or activate traps in the dungeon to try and steal that crown from you.</p>
+                <p>This way, we created a fun, chaotic game in which the dynamic constantly switches from a Free-For-All to a 3-versus-1 loop, where you're forced to work together to obtain the crown, only to be chased by your former allies once you succeed.</p>
+                <p>It was voted the #1 game made during the semester, was draft picked by The Rookies and has been released on Steam.</p>
+                <p>The game itself was built in Unity, thus using C# as its programming language.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <img src="../images/image1.jpg" alt="Project Image 4">
+            <div>
+                <h3>My Role</h3>
+                <p>In this project, I was one of two programmers. I focused on everything related to gameplay, menus and interactability. The other programmer was a sound design student, who handled the sound implementation and helped the artists with animations where needed.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <img src="../images/image1.jpg" alt="Project Image 5">
+            <div>
+                <h3>Elements</h3>
+                <p>Gameplay-wise, there were several distinct elements that I needed to implement:</p>
+                <ul>
+                    <li>Players & PlayerController</li>
+                    <li>Traps</li>
+                    <li>Items & Abilities</li>
+                    <li>Menus</li>
+                    <li>A way of tracking who's winning and transitioning scenes</li>
+                </ul>
+                <p>Most of these were done with inheritance in mind, as that design pattern made for classes that were easily expanded on. This also made it very easy to create new variants of items, traps and other objects wherever we needed.</p>
+                <p>Let's start from the top, and walk through my thought processes for each of these.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <img src="../images/image1.jpg" alt="Project Image 6">
+            <div>
+                <h4>Players & PlayerController</h4>
+                <p>The players had a few simple requirements: move, attack and use items.</p>
+                <p>As this was my first time working with Unity's new input system, I found it very intuitive to implement events for each of these, and hook up corresponding functions inside the Player class.</p>
+                <p>Soon after starting development, I realised the need for a controlling class that persisted between scene transitions. This way I could save player settings and variables, as well as giving the game an easy way to let each player control the menu elements.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <img src="../images/image1.jpg" alt="Project Image 7">
+            <div>
+                <h4>Traps</h4>
+                <p>The traps are all based on a base class called BaseTrap, which is extended by either passive or active traps. The base trap provides functions for handling animations, timers and general functionality. The inheriting classes then extend this with logic for activating either passively or actively.</p>
+                <p>Whereas with the items, I created a specific script for each of them, I went a different route for the traps. I identified a few types that we would need, those being:</p>
+                <ul>
+                    <li>A passive trap that activates when a player gets close to it</li>
+                    <li>An active trap that can be activated by a player by pressing a button</li>
+                </ul>
+                <p>The common elements for these, I then implemented in the Base Trap script. It handles animations through code and makes it so that players get stunned whenever they come in contact with an activated trap.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <img src="../images/image1.jpg" alt="Project Image 8">
+            <div>
+                <h4>Items & Abilities</h4>
+                <p>When thinking about how I would implement these, I first considered making a base class for both types separately, and have them be distinctly different from one another. After some consideration however, I settled on one base class, that both would derive from. Functionally this made items and abilities the same, but they would be acquired in a different way.</p>
+                <p>The Base Item class provides functionality for cooldowns, HUD elements, RFX and more.</p>
+                <p>Inherited classes then extend this with their own functionality, using the UseItem() method, each item can easily implement different effects that seamlessly work within the rest of the game.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <img src="../images/image1.jpg" alt="Project Image 9">
+            <div>
+                <h4>Menus</h4>
+                <p>At first, I programmed every button separately. I very quickly realized that this would a monumental task if we wanted a few decent menu screens.</p>
+                <p>Instead, I opted for a modular BaseMenu script, which can be linked to different other menu scripts and automatically manages transitioning between them.</p>
+                <p>It also defines a button that should be selected when the menu becomes active, which was necessary for controller support.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <img src="../images/image1.jpg" alt="Project Image 10">
+            <div>
+                <h4>Player Manager</h4>
+                <p>To handle player joining, scene transitions and general data that should be kept between scenes, we needed a manager. This class takes care of logic during rounds like keeping track of which player is winning and how close each player is to the total amount of rounds won needed to win the game entirely.</p>
+                <p>It also makes sure that each player is using the same values whenever a round starts. This makes it easy to change round durations, player speed and more. We didn't have time to implement it, but this would also make it very easy to add a settings menu to let players change up the game to tailor to their playstyle. Or to make games even more chaotic, of course.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <img src="../images/image1.jpg" alt="Project Image 11">
+            <div>
+                <h4>Steamworks</h4>
+                <p>Once the game was finished, we managed to win the popular vote. This meant our game got to be released on Steam, but also meant that I needed to add an integration with Steamworks to handle the Steam overlay and possibly future interactions with it.</p>
+                <p>Luckily, I came across this great library called Steamworks.NET, which handles practically everything we needed and has a neat Unity implementation.</p>
+                <p>Apart from the code integration, it also gave me some experience with just what goes into getting a game on Steam. This includes getting a store page running, preparing a build for release and publishing patches after launch.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div>
+                <h3>Conclusion</h3>
+                <p>Crowned Control was a very fun project to work on, and taught me a lot of things about both Unity and teamwork. During the few weeks of development, I truly learned to appreciate being part of a well-oiled team and making something I'm proud of.</p>
+            </div>
+        </div>
+
     </section>
-
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 Joren Dresselaers. All rights reserved.</p>
     </footer>
 </body>
 </html>

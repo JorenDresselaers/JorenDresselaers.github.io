@@ -2,16 +2,18 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2; /* Background color for the body */
+    background-color: #121212; /* Dark background color for the body */
+    color: #ffffff; /* White text color for high contrast */
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 header {
-    background-color: #333;
+    background-color: #1e1e1e; /* Darker background color for the header */
     color: white;
     padding: 1em 20px; /* Add padding to the sides of the header text */
     text-align: center; /* Center align the header content */
     width: 100%; /* Ensure header spans full width */
+    position: relative; /* Relative positioning for absolute positioning of the title */
 }
 
 nav ul {
@@ -20,6 +22,7 @@ nav ul {
     padding: 0;
     display: flex; /* Use flexbox for the navigation */
     justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Center align items vertically */
     padding: 0 20px; /* Add padding to the sides of the navigation */
 }
 
@@ -28,8 +31,10 @@ nav ul {
     }
 
         nav ul li.title {
-            flex: 1; /* Allow title to take remaining space */
-            text-align: center; /* Center align the title */
+            position: absolute; /* Position the title absolutely */
+            left: 50%; /* Move to the center horizontally */
+            transform: translateX(-50%); /* Center the title exactly */
+            text-align: center; /* Center align the title text */
         }
 
         nav ul li.align-right {
@@ -43,12 +48,24 @@ nav ul {
 
 section {
     padding: 2em;
-    margin: 20px 20px;
+    margin: 20px auto; /* Center the section and add margin */
     width: calc(100% - 40px); /* Adjust width to account for padding */
+    max-width: 1200px; /* Optional: Add a max width to limit the section's width */
     overflow: hidden; /* Clearfix for floated elements */
-    background-color: #fff; /* Background color for sections */
+    background-color: #1e1e1e; /* Darker background color for sections */
     border-radius: 8px; /* Rounded corners for sections */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow for sections */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Drop shadow for sections */
+}
+
+#projects h2 {
+    text-align: center; /* Center align the Projects heading */
+    font-size: 2.5em; /* Increase the font size */
+    margin-bottom: 1em; /* Add some margin below the heading */
+    color: #ffffff; /* Ensure the heading is white */
+}
+
+.project-container {
+    padding: 0 20px; /* Add padding to the sides of the project container */
 }
 
 .project {
@@ -56,16 +73,17 @@ section {
     float: left;
     padding: 10px;
     box-sizing: border-box;
-    background-color: #e2e2e2;
+    background-color: #333; /* Darker background color for projects */
     margin: 10px;
     border-radius: 8px;
     display: block;
     text-decoration: none; /* Remove underline from <a> */
-    color: inherit; /* Inherit color from parent */
+    color: #ffffff; /* White text color for high contrast */
 }
 
     .project:hover {
         transform: translateY(-5px);
+        background-color: #444; /* Slightly lighter on hover */
     }
 
     .project img {
@@ -77,13 +95,13 @@ section {
     .project h3 {
         margin: 0;
         text-align: center;
-        color: #333; /* Ensure heading inherits color */
+        color: #ffffff; /* Ensure heading inherits color */
     }
 
     .project p {
         margin: 0; /* Remove default margin */
         text-align: center;
-        color: #333; /* Set a specific color for paragraphs */
+        color: #cccccc; /* Set a specific color for paragraphs */
     }
 
     .project a {
@@ -105,7 +123,7 @@ section {
 }
 
 footer {
-    background-color: #333;
+    background-color: #1e1e1e; /* Darker background color for the footer */
     color: white;
     text-align: center;
     padding: 1em 20px; /* Add padding to the sides of the footer text */

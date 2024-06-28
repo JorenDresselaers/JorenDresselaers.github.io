@@ -47,7 +47,12 @@ nav ul {
             margin-left: 10px; /* Adjust spacing between icons */
         }
 
-            nav ul li.align-right a svg.icon,
+        nav ul li.align-right a svg.icon {
+            width: 48px; /* Adjust size of icons */
+            height: 48px; /* Adjust size of icons */
+            fill: white;
+        }
+
             nav ul li.align-right a img {
             width: 48px; /* Adjust size of icons */
             height: 48px; /* Adjust size of icons */

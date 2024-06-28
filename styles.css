@@ -39,7 +39,20 @@ nav ul {
 
         nav ul li.align-right {
             margin-left: auto; /* Push right-aligned items to the right */
+            display: flex;
+            align-items: center;
         }
+
+        nav ul li.align-right a {
+            margin-left: 10px; /* Adjust spacing between icons */
+        }
+
+            nav ul li.align-right a svg.icon,
+            nav ul li.align-right a img {
+            width: 48px; /* Adjust size of icons */
+            height: 48px; /* Adjust size of icons */
+        }
+
 
         nav ul li a {
             color: white;

@@ -126,6 +126,7 @@ section {
     .project p {
         margin: 0; /* Remove default margin */
         text-align: center;
+        color: #cccccc;
     }
 
     .project a {

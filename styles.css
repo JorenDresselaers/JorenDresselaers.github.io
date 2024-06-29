@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #121212; /* Dark background color for the body */
-    color: #ffffff; /* White text color for high contrast */
+    color: #a9a99c; /* White text color for high contrast */
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
@@ -74,11 +74,15 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Drop shadow for sections */
 }
 
+    section h1 {
+        color: white;
+    }
+
 #projects h2 {
     text-align: center; /* Center align the Projects heading */
     font-size: 2.5em; /* Increase the font size */
     margin-bottom: 1em; /* Add some margin below the heading */
-    color: #ffffff; /* Ensure the heading is white */
+    color: white; /* Ensure the heading is white */
 }
 
 .project-container {
@@ -95,7 +99,7 @@ section {
     border-radius: 8px;
     display: block;
     text-decoration: none; /* Remove underline from <a> */
-    color: #ffffff; /* White text color for high contrast */
+    color: #a9a99c; /* White text color for high contrast */
 }
 
     .project:hover {
@@ -109,16 +113,19 @@ section {
         border-radius: 8px;
     }
 
+    .project h2 {
+        color: white
+    }
+
     .project h3 {
         margin: 0;
         text-align: center;
-        color: #ffffff; /* Ensure heading inherits color */
+        color: white
     }
 
     .project p {
         margin: 0; /* Remove default margin */
         text-align: center;
-        color: #cccccc; /* Set a specific color for paragraphs */
     }
 
     .project a {
@@ -141,7 +148,7 @@ section {
 
 footer {
     background-color: #1e1e1e; /* Darker background color for the footer */
-    color: white;
+    color: #a9a99c;
     text-align: center;
     padding: 1em 20px; /* Add padding to the sides of the footer text */
     width: 100%;
@@ -170,6 +177,18 @@ footer {
         border-radius: 8px;
     }
 
+    .content-section h3 {
+        color: white;
+    }
+    
+    .content-section h2 {
+        color: white;
+    }
+    
+    .content-section h4 {
+        color: white;
+    }
+
     .content-section div {
         flex: 1;
     }
@@ -181,6 +200,10 @@ footer {
 
 .column {
     flex: 1;
+}
+
+.column h2 {
+    color: white;
 }
 
 /* Styles for the video container and video element */

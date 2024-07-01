@@ -171,7 +171,7 @@ footer {
         flex-direction: row-reverse; /* Alternate alignment: right */
     }
 
-    .content-section img {
+    .content-section img, .content-section video {
         max-width: 50%; /* Make the image take up to 50% of the container */
         height: auto; /* Maintain the aspect ratio */
         margin: 10px;

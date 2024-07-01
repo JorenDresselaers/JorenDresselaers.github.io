@@ -194,6 +194,19 @@ footer {
         flex: 1;
     }
 
+/* Styles for mobile screens */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+    }
+
+        .content-section img, .content-section video {
+            max-width: 100%; /* Make the image take up to 100% of the container */
+            margin: 10px 0; /* Margin adjusted for vertical layout */
+        }
+}
+
 .intro-section {
     display: flex;
     gap: 20px;

@@ -108,8 +108,9 @@ section {
     }
 
     .project img {
-        max-width: 100%;
-        height: auto;
+        width: 100%;
+        max-height: 200px; /* Fixed maximum height */
+        object-fit: contain; /* Ensures the image is resized to fit within the container without being cut off or stretched */
         border-radius: 8px;
     }
 

@@ -1,0 +1,37 @@
+{
+    "id": "maze-game",
+    "title": "Maze Game",
+    "video": "/videos/MazeGame.mp4",
+    "overview": {
+        "title": "Maze Game",
+        "image": "/images/MazeGame.png",
+        "description": "A project for the Game Mechanics course at DAE, where I focused on behaviour trees and enemy AI.",
+        "tags": ["Unreal Engine", "C++", "Gameplay", "AI"],
+        "date": "2023-12-01"
+    },
+    "generalInfo": {
+        "duration": "60 hours across 9 weeks",
+        "engine": "Unreal Engine 4",
+        "links": [],
+        "description": [
+            {
+                "title": "What is it?",
+                "content": "This was a project in which we had to design and create a prototype of a game. Beforehand, I was very intrigued in the behaviour trees of Unreal, so I sought to learn more about them.\n\nIn this game, you have to find your way through a maze by finding helpful items and collecting keys to open the exit. However, you are not alone in this maze. A hostile entity roams these halls as well, searching for these same items as you do.\n\nThis 'minotaur', to quote mythology, seeks to stop you from exiting its maze and will seek out items that spawn copies of itself. If you find these duplicators first, you can choose to destroy them. Doing so will anger the minotaur and draw its attention towards you momentarily, after which you might be able to make an escape."
+            }
+        ]
+    },
+    "sections": [
+        {
+            "title": "Behaviour Tree",
+            "content": "I created a behaviour tree that operated as the 'brain' of the Minotaur.",
+            "image": "/images/MazeGame/BehaviourTree.png",
+            "imageAlt": "Behaviour Tree"
+        },
+        {
+            "title": "Blackboard",
+            "content": "I learned how to work with Unreal Engine's blackboard, and how to use it to store variables that can be accessed by the behaviour tree.",
+            "image": "/images/MazeGame/BlackboardVariables.png",
+            "imageAlt": "Blackboard Variables"
+        }
+    ]
+}

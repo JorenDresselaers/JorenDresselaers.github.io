@@ -1,0 +1,36 @@
+{
+    "id": "template-project",
+    "title": "Template Project",
+    "video": "",
+    "overview": {
+        "title": "Template Project",
+        "image": "",
+        "description": "",
+        "tags": [],
+        "date": "2200-01-01"
+    },
+    "generalInfo": {
+        "duration": "",
+        "engine": "",
+        "links": [
+            {
+                "name": "",
+                "url": ""
+            }
+        ],
+        "description": [
+            {
+                "title": "",
+                "content": ""
+            }
+        ]
+    },
+    "sections": [
+        {
+            "title": "",
+            "content": "",
+            "image": "",
+            "imageAlt": ""
+        }
+    ]
+}

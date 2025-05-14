@@ -1,0 +1,28 @@
+{
+    "id": "project-revibelize",
+    "title": "Project: Revibelize",
+    "video": "../videos/ProjectRevibelize.mp4",
+    "overview": {
+        "title": "Project: Revibelize",
+        "image": "/images/ProjectRevibelize.png",
+        "description": "A student project made for the course Group Projects at DAE.",
+        "tags": ["Unity", "C#", "Gameplay", "Kinect", "XR"],
+        "date": "2024-06-01"
+    },
+    "generalInfo": {
+        "duration": "Half a semester. 40 hours of work per week.",
+        "engine": "Unity",
+        "links": [],
+        "description": [
+            {
+                "title": "What is it?",
+                "content": "This project was made during the Group Projects course at DAE. It was made for their research branch, named DAE Research. The goal was to make a mixed reality game, using the Azure Kinect, that would invite people to dance together and have a brief musical experience."
+            },
+            {
+                "title": "My Role",
+                "content": "I was one of three programmers. I focused on the gameplay aspects, as well as all integration of the Azure Kinect interactions."
+            }
+        ]
+    },
+    "sections": []
+}

@@ -1,0 +1,72 @@
+    {
+        "id": "roguelike-prototype",
+        "title": "Roguelike Prototype",
+        "video": "/videos/RoguelikePrototype.mp4",
+        "overview": {
+            "title": "Roguelike Prototype",
+            "image": "/images/RoguelikePrototype.png",
+            "description": "A prototype of a roguelike game used as a proposal for the Group Projects course at DAE.",
+            "tags": ["Unity", "C#", "Gameplay"],
+            "date": "2024-04-01"
+        },
+        "generalInfo": {
+            "duration": "1 week",
+            "engine": "Unity",
+            "links": [
+                {
+                    "name": "GitHub",
+                    "url": "https://github.com/JorenDresselaers/Echoes_Of_Disruption_Demo"
+                }
+            ],
+            "description": [
+                {
+                    "title": "What is it?",
+                    "content": "This project was a prototype, nicknamed Echoes of Disruption, for a roguelike game that me and a group of four other students proposed to turn into a full project for the group projects course. We unfortunately got turned down, however I am still proud of the progress we made in the short time we worked on the prototype."
+                },
+                {
+                    "title": "The Essence",
+                    "content": "Echoes of Disruption is a short demo of a roguelike. The aim is to survive hordes of enemies, fight bosses and collect loot while you strive to live through to the end."
+                },
+                {
+                    "title": "My Role",
+                    "content": "My role within the project was that of the main programmer. The team was made up of mostly the Crowned Control team, which means I was taking on all programming not related to sound."
+                }
+            ]
+        },
+        "sections": [
+            {
+                "title": "Mechanics",
+                "content": "For implementing the main mechanics, I took inspiration from how I created the items in Crowned Control. Which meant mainly using inheritance to make sure variations could easily be slotted in wherever we needed them.\n\nI wanted items and abilities to work seamlessly for both the player and their opponents, which meant I had to code them in a way that coincided with that.\n\nTo this end, the base Item class provides multiple events that automatically get called in the Base Character class, making sure that items get triggered for both player and npc alike.",
+                "image": "/images/RoguelikePrototype/Items.png",
+                "imageAlt": "Image of an item in the editor"
+            },
+            {
+                "title": "Player Classes",
+                "content": "We also wanted to have multiple classes or characters available, to this end I created a base class 'class', which serves as a template for different characters. It can be given certain abilities to start with, as well as set several variables of the actual player like damage and attack type.",
+                "image": "/images/RoguelikePrototype/PlayerClass.png",
+                "imageAlt": "Image of a player class in the editor"
+            },
+            {
+                "title": "Abilities",
+                "content": "Similar to items, yet still different. The base implementation rests on the same inheritance principles, yet the main mechanical difference is that abilities should not be stackable and usually be activated on a player's input.\n\nTo accomplish this, I created three different slots for abilities in the player class, then made it so that each ability can have one of those assigned as well. This makes for a natural distinction between the purposes of each ability, as well as provide some guidance to what each slot's assigned skill usually does.\n\nMost abilities tend to have a cooldown as well, so that was implemented in the Base Skill to not require a custom implementation every time we need it.",
+                "image": "/images/RoguelikePrototype/Abilities.png",
+                "imageAlt": "Image of abilities in the editor"
+            },
+            {
+                "title": "The Director",
+                "content": "Taking inspiration from Risk of Rain 2's director AI, I implemented my own version of them in this prototype.\n\nWhenever something needs to be spawned in, we create a Director and assign it that task. Concisely, this means that an object is spawned with a deck of 'cards'. Each of these cards is assigned a game object, a cost and a weight. The Director also gains a certain amount of credits, either with or without a periodic income, and spend them to spawn objects.\n\nWhen the Director wants to spawn something, it will draw a random card from that deck, either weighted or truly random. It will then check if it can afford the drawn card. If it can, it pays the cost in credits and will spawn the object. If not, it will simply draw another until it finds one that it can afford.\n\nIf it cannot afford the lowest cost card, it will either wait for its income to catch up with that lowest cost, or disable itself when no income is set.\n\nLastly, it has the option to place spawned objects either on predefined positions in the level, or within a set distance of a given object.",
+                "image": "/images/RoguelikePrototype/Director.png",
+                "imageAlt": "Image of the Director in the editor"
+            },
+            {
+                "title": "The Deck",
+                "content": "The deck of cards is a simple scriptable object, which means it can be used for anything that is saved as a GameObject.\n\nIt also has the option to either be infinite, or remove drawn cards whenever they are paid for."
+            },
+            {
+                "title": "Talent Tree",
+                "content": "Because we wanted to have progression between game sessions, I also implemented a talent system that would let the player choose talents in a tree. These would then modify the player's stats or abilities during a run.",
+                "image": "/images/RoguelikePrototype/Gameplay.png",
+                "imageAlt": "Image of the intended gameplay loop"
+            }
+        ]
+    }

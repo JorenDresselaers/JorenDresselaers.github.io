@@ -1,0 +1,48 @@
+{
+    "id": "ray-tracer",
+    "title": "Ray Tracer",
+    "video": "/videos/LevelEditing.mp4",
+    "overview": {
+        "title": "Ray Tracer",
+        "image": "/images/RayTracer/Reference.png",
+        "description": "A ray tracer written in C++ for the course of Graphics Programming 1 at DAE.",
+        "tags": ["C++", "Graphics"],
+        "date": "2023-08-01"
+    },
+    "generalInfo": {
+        "duration": "One semester",
+        "course": "Graphics Programming 1",
+        "engine": "A custom course-provided engine",
+        "links": [
+            {
+                "name": "GitHub",
+                "url": "https://github.com/JorenDresselaers/RayTracer"
+            }
+        ],
+        "description": [
+            {
+                "title": "What is it?",
+                "content": "A ray tracer written in C++ for the course of Graphics Programming 1 at DAE."
+            }
+        ]
+    },
+    "sections": [
+        {
+            "title": "Objective",
+            "content": "For this course, we were tasked with creating a ray tracer during the course of one semester. It taught me a lot about how rendering in games is actually done.",
+            "image": "/images/RayTracer/Reference.png",
+            "imageAlt": "Reference Image"
+        },
+        {
+            "title": "Capabilities",
+            "content": "The program can render both mathematical spheres and planes, as well as triangles. It can also load in .obj files and render them using those triangles.",
+            "image": "/images/RayTracer/Bunny.png",
+            "imageAlt": "Stanford Bunny Image"
+        },
+        {
+            "title": "Level Editing",
+            "content": "While not required by the course, I was intrigued by the idea of being able to move things around the level. Thus I spent a bit of time implementing a raycast, selection, and movement logic.",
+            "video": "../videos/LevelEditing.mp4"
+        }
+    ]
+}

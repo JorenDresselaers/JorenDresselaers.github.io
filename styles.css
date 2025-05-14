@@ -134,6 +134,22 @@ section {
         text-decoration: none;
     }
 
+    /* Tag bubbles inside project cards */
+    .project .tags {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .project .tag-bubble {
+        background-color: #e0e0e0;
+        border-radius: 15px;
+        padding: 3px 10px;
+        font-size: 12px;
+        color: #333;
+    }
+
 @media (max-width: 768px) {
     /* Responsive design for smaller screens */
     .project {
@@ -227,3 +243,93 @@ footer {
         display: block; /* Remove inline spacing issues */
         border-radius: 8px; /* Match the container's rounded corners */
     }
+
+/* Tag filter dropdown container */
+#tag-filter-container {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#tag-filter-toggle {
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, border-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#tag-filter-toggle:hover {
+    background-color: #333;
+    border-color: #555;
+}
+
+/* Tag filter dropdown */
+#tag-filter {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 300px;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hidden state for dropdown */
+#tag-filter.hidden {
+    display: none;
+}
+
+/* Tag bubbles in the dropdown */
+#tag-filter .tag {
+    background-color: #2e2e2e;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 15px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#tag-filter .tag:hover {
+    background-color: #444;
+    border-color: #666;
+}
+
+#tag-filter .tag.active {
+    background-color: #0078d7;
+    color: white;
+    border-color: #005bb5;
+}
+
+/* Links */
+a:link {
+    color: #ff9800;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:visited {
+    color: #9c27b0;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: #f44336;
+}

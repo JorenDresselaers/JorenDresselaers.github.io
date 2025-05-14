@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="project-title">Project Title</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="/scripts/header.js"></script>
+    <script src="/scripts/project-loader.js"></script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            loadHeader("header-placeholder");
+            loadProjectData();
+        });
+    </script>
+
+    <section id="project-content" class="project-container">
+        <!-- Dynamic content will be injected here -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Joren Dresselaers. All rights reserved.</p>
+    </footer>
+</body>
+</html>

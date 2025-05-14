@@ -1,0 +1,34 @@
+[
+    {
+        "id": "The Vault",
+        "type": "link",
+        "url": "/projects/vault.html",
+        "image": "/images/Vault.jfif",
+        "description": "A collection of smaller projects and those I am currently working on.",
+        "date": "2100-01-01"
+    },
+    {
+        "id": "project-revibelize",
+        "type": "project"
+    },
+    {
+        "id": "crowned-control",
+        "type": "project"
+    },
+    {
+        "id": "roguelike-prototype",
+        "type": "project"
+    },
+    {
+        "id": "maze-game",
+        "type": "project"
+    },
+    {
+        "id": "realm-of-the-mad-god",
+        "type": "project"
+    },
+    {
+        "id": "ray-tracer",
+        "type": "project"
+    }
+]

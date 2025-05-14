@@ -1,0 +1,86 @@
+{
+    "id": "crowned-control",
+    "title": "Crowned Control",
+    "video": "/videos/crownedControlTrailer.mp4",
+    "overview": {
+        "title": "Crowned Control",
+        "image": "/images/CrownedControl/CrownedControlLogo.png",
+        "description": "A chaotic 4-player couch co-op game where players fight for control of a ghostly crown.",
+        "tags": ["Unity", "C#", "Multiplayer", "Steam"],
+        "date": "2024-05-01"
+    },
+    "generalInfo": {
+        "duration": "11 weeks (10 hours per week)",
+        "engine": "Unity",
+        "links": [
+            {
+                "name": "Steam",
+                "url": "https://store.steampowered.com/app/2516780/Crowned_Control/"
+            },
+            {
+                "name": "Itch.io",
+                "url": "https://gsteven.itch.io/crownedcontrol"
+            },
+            {
+                "name": "The Rookies",
+                "url": "https://www.therookies.co/entries/23728"
+            }
+        ],
+        "description": [
+            {
+                "title": "What is it?",
+                "content": "This is a project in which I worked together with four other students. The theme of the course was 'couch co-op', so we decided on the relatively simple theme of a 4-player Free-For-All with a twist.\n\nThe goal of the game is to obtain and keep a ghostly crown for as long as possible. Doing so turns you into a ghost yourself and gives your knight some unique abilities, which you must use to avoid the other players. The knights, on the other hand, can collect items from chests or activate traps in the dungeon to try and steal that crown from you.\n\nThis way, we created a fun, chaotic game in which the dynamic constantly switches from a Free-For-All to a 3-versus-1 loop, where you're forced to work together to obtain the crown, only to be chased by your former allies once you succeed.\n\nIt was voted the #1 game made during the semester, was draft picked by The Rookies, and has been released on Steam. The game itself was built in Unity, thus using C# as its programming language."
+            },
+            {
+                "title": "My Role",
+                "content": "In this project, I was one of two programmers. I focused on everything related to gameplay, menus, and interactability. The other programmer was a sound design student, who handled the sound implementation and helped the artists with animations where needed."
+            },
+            {
+                "title": "Elements",
+                "content": "Gameplay-wise, there were several distinct elements that I needed to implement:\n\n- Players & PlayerController\n- Traps\n- Items & Abilities\n- Menus\n- A way of tracking who's winning and transitioning scenes\n\nMost of these were done with inheritance in mind, as that design pattern made for classes that were easily expanded on. This also made it very easy to create new variants of items, traps, and other objects wherever we needed."
+            }
+        ]
+    },
+    "sections": [
+        {
+            "title": "Players & PlayerController",
+            "content": "The players had a few simple requirements: move, attack, and use items.\n\nAs this was my first time working with Unity's new input system, I found it very intuitive to implement events for each of these, and hook up corresponding functions inside the Player class.\n\nSoon after starting development, I realised the need for a controlling class that persisted between scene transitions. This way I could save player settings and variables, as well as giving the game an easy way to let each player control the menu elements.",
+            "image": "/images/CrownedControl/Controls.png",
+            "imageAlt": "Image of the controls"
+        },
+        {
+            "title": "Traps",
+            "content": "The traps are all based on a base class called BaseTrap, which is extended by either passive or active traps. The base trap provides functions for handling animations, timers, and general functionality. The inheriting classes then extend this with logic for activating either passively or actively.\n\nWhereas with the items, I created a specific script for each of them, I went a different route for the traps. I identified a few types that we would need, those being:\n\n- A passive trap that activates when a player gets close to it\n- An active trap that can be activated by a player by pressing a button\n\nThe common elements for these, I then implemented in the Base Trap script. It handles animations through code and makes it so that players get stunned whenever they come in contact with an activated trap.",
+            "image": "/images/CrownedControl/Traps.png",
+            "imageAlt": "Image of traps"
+        },
+        {
+            "title": "Items & Abilities",
+            "content": "When thinking about how I would implement these, I first considered making a base class for both types separately, and have them be distinctly different from one another. After some consideration, however, I settled on one base class, that both would derive from. Functionally this made items and abilities the same, but they would be acquired in a different way.\n\nThe Base Item class provides functionality for cooldowns, HUD elements, RFX, and more.\n\nInherited classes then extend this with their own functionality. Using the UseItem() method, each item can easily implement different effects that seamlessly work within the rest of the game.",
+            "image": "/images/CrownedControl/ItemsAndAbilities.png",
+            "imageAlt": "Image of items and abilities"
+        },
+        {
+            "title": "Menus",
+            "content": "At first, I programmed every button separately. I very quickly realized that this would be a monumental task if we wanted a few decent menu screens.\n\nInstead, I opted for a modular BaseMenu script, which can be linked to different other menu scripts and automatically manages transitioning between them.\n\nIt also defines a button that should be selected when the menu becomes active, which was necessary for controller support.",
+            "image": "/images/CrownedControl/Menu.png",
+            "imageAlt": "Image of the menu"
+        },
+        {
+            "title": "Player Manager",
+            "content": "To handle player joining, scene transitions, and general data that should be kept between scenes, we needed a manager. This class takes care of logic during rounds like keeping track of which player is winning and how close each player is to the total amount of rounds won needed to win the game entirely.\n\nIt also makes sure that each player is using the same values whenever a round starts. This makes it easy to change round durations, player speed, and more. We didn't have time to implement it, but this would also make it very easy to add a settings menu to let players change up the game to tailor to their playstyle. Or to make games even more chaotic, of course.",
+            "image": "/images/CrownedControl/PlayerManager.png",
+            "imageAlt": "Image of the player manager"
+        },
+        {
+            "title": "Steamworks",
+            "content": "Once the game was finished, we managed to win the popular vote. This meant our game got to be released on Steam, but also meant that I needed to add an integration with Steamworks to handle the Steam overlay and possibly future interactions with it.\n\nLuckily, I came across this great library called Steamworks.NET, which handles practically everything we needed and has a neat Unity implementation.\n\nApart from the code integration, it also gave me some experience with just what goes into getting a game on Steam. This includes getting a store page running, preparing a build for release, and publishing patches after launch.",
+            "image": "/images/CrownedControl/SteamWorks.png",
+            "imageAlt": "Image of Steamworks integration"
+        },
+        {
+            "title": "Conclusion",
+            "content": "Crowned Control was a very fun project to work on, and taught me a lot of things about both Unity and teamwork. During the few weeks of development, I truly learned to appreciate being part of a well-oiled team and making something I'm proud of."
+        }
+    ]
+}

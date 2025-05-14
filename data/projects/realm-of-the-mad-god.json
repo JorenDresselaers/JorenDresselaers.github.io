@@ -1,0 +1,52 @@
+{
+    "id": "realm-of-the-mad-god",
+    "title": "Realm of the Mad God Clone",
+    "video": "../videos/ROTMGPlaythrough.mp4",
+    "overview": {
+        "title": "Realm of the Mad God Clone",
+        "image": "/images/ROTMG.png",
+        "description": "A project for the Programming 2 course at DAE where I focused on an inventory system and items.",
+        "tags": ["C++", "Gameplay"],
+        "date": "2023-10-01"
+    },
+    "generalInfo": {
+        "duration": "One semester",
+        "engine": "Custom engine provided by DAE",
+        "links": [
+            {
+                "name": "GitHub Repository",
+                "url": "https://github.com/JorenDresselaers/RealmOfTheMadGodClone"
+            }
+        ],
+        "description": [
+            {
+                "title": "What is it?",
+                "content": "For this assignment, we were tasked with recreating a 2D game. I chose Realm of the Mad God, focusing on implementing its inventory system and item structure. It was built in a C++ engine provided by the course, which gave us a basic framework to work inside of. This was one of my first experiences with implementing roguelike elements in a game, and has inspired a lot of the projects I've worked on since."
+            },
+            {
+                "title": "Elements",
+                "content": "Loading assets from files\nAn inventory system\nRandom loot drops\nA character with abilities and stats, influenced by equipped gear"
+            }
+        ]
+    },
+    "sections": [
+        {
+            "title": "Assets from files",
+            "content": "Early on in development, I aimed for the ability to make as much objects as possible loadable via files. This sped up development by not requiring tons of different classes for each variation of enemy, item, or map. Relevant attributes can simply be set via an asset file, which is then loaded into the game by providing that file to the right class. Below is an example of an enemy asset file:\n\nName Pirate_Sailor\nSprite resources/Sprites/PirateSailor.png\nHealth 15\nDefense 0\nMovementSpeed 10\nExperience 2\nBulletDamage 6\nBulletSpeed 400\nBulletRange 200\nShotCooldown 1\nDropTable resources/DropTables/TableBasic.txt",
+            "image": "/images/ROTMG/EnemyStats.png",
+            "imageAlt": "Enemy Stats Example"
+        },
+        {
+            "title": "The Inventory System",
+            "content": "My favourite part of this whole project, this is a class that keeps track of items currently carried by the player. This is interacted with via the game's UI and allows for (un-)equipping items and using consumables.",
+            "image": "/images/ROTMG/PlayerClass.png",
+            "imageAlt": "Player Inventory System"
+        },
+        {
+            "title": "Random Loot Drops",
+            "content": "Of course, any respectable roguelike needs random item drops, so true to the actual game, I implemented those as well. The implementation allows for a weight, followed by a file containing the item linked to that weight. When an item should be dropped, it then randomly selects a number between 0 and the total weight sum. If it corresponds to an item, it gets created and dropped to the floor. If the resulting value equals a null item, nothing happens. Below is an example of a loot drop table:\n\n50 resources/Items/T1Bow.txt\n50 resources/Items/T1Armor.txt\n25 resources/Items/T2Bow.txt\n25 resources/Items/T2Armor.txt\n10 resources/Items/T3Bow.txt\n10 resources/Items/T3Armor.txt\n20 resources/Items/T1RingAttack.txt\n20 resources/Items/T1RingHealth.txt\n20 resources/Items/T1RingMana.txt\n300 null",
+            "image": "/images/ROTMG/ItemGeneration.png",
+            "imageAlt": "Random Loot Drops Example"
+        }
+    ]
+}

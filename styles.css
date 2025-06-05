@@ -1,19 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+    --bg-start: #0d0d20;
+    --bg-end: #1e1e3f;
+    --accent: #ff9800;
+    --text-light: #e0e0e0;
+    --text-dark: #333;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Dark background color for the body */
-    color: #a9a99c; /* White text color for high contrast */
+    background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+    color: var(--text-light);
     overflow-x: hidden; /* Hide horizontal scrollbar */
+    min-height: 100vh;
 }
 
 header {
-    background-color: #1e1e1e; /* Darker background color for the header */
+    background: linear-gradient(135deg, #141428, #1e1e3f);
     color: white;
     padding: 1em 20px; /* Add padding to the sides of the header text */
     text-align: center; /* Center align the header content */
     width: 100%; /* Ensure header spans full width */
     position: relative; /* Relative positioning for absolute positioning of the title */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
@@ -35,6 +47,7 @@ nav ul {
             left: 50%; /* Move to the center horizontally */
             transform: translateX(-50%); /* Center the title exactly */
             text-align: center; /* Center align the title text */
+            color: var(--accent);
         }
 
         nav ul li.align-right {
@@ -51,17 +64,32 @@ nav ul {
                     width: 48px; /* Adjust size of icons */
                     height: 48px; /* Adjust size of icons */
                     fill: white;
+                    transition: fill 0.3s;
+                }
+
+                nav ul li.align-right a:hover svg.icon {
+                    fill: var(--accent);
                 }
 
                 nav ul li.align-right a img {
                     width: 48px; /* Adjust size of icons */
                     height: 48px; /* Adjust size of icons */
+                    transition: filter 0.3s;
                 }
 
-        nav ul li a {
-            color: white;
+                nav ul li.align-right a:hover img {
+                    filter: brightness(0) saturate(100%) invert(65%) sepia(60%) saturate(506%) hue-rotate(1deg) brightness(95%) contrast(102%);
+                }
+
+nav ul li a {
+            color: var(--text-light);
             text-decoration: none;
+            transition: color 0.3s;
         }
+
+            nav ul li a:hover {
+                color: var(--accent);
+            }
 
 section {
     padding: 2em;
@@ -69,20 +97,21 @@ section {
     width: calc(100% - 40px); /* Adjust width to account for padding */
     max-width: 1200px; /* Optional: Add a max width to limit the section's width */
     overflow: hidden; /* Clearfix for floated elements */
-    background-color: #1e1e1e; /* Darker background color for sections */
+    background-color: rgba(30, 30, 30, 0.75); /* Semi-transparent background */
     border-radius: 8px; /* Rounded corners for sections */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Drop shadow for sections */
+    backdrop-filter: blur(4px);
 }
 
     section h1 {
-        color: white;
+        color: var(--text-light);
     }
 
 #projects h2 {
     text-align: center; /* Center align the Projects heading */
     font-size: 2.5em; /* Increase the font size */
     margin-bottom: 1em; /* Add some margin below the heading */
-    color: white; /* Ensure the heading is white */
+    color: var(--text-light); /* Ensure the heading is white */
 }
 
 .project-container {
@@ -94,17 +123,21 @@ section {
     float: left;
     padding: 10px;
     box-sizing: border-box;
-    background-color: #333; /* Darker background color for projects */
+    background-color: rgba(37, 37, 74, 0.8);
     margin: 10px;
     border-radius: 8px;
     display: block;
     text-decoration: none; /* Remove underline from <a> */
-    color: #a9a99c; /* White text color for high contrast */
+    color: var(--text-light); /* High contrast text */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
 }
 
     .project:hover {
-        transform: translateY(-5px);
-        background-color: #444; /* Slightly lighter on hover */
+        transform: translateY(-5px) scale(1.02);
+        background-color: rgba(55, 55, 105, 0.9); /* Slightly lighter on hover */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
     }
 
     .project img {
@@ -115,13 +148,13 @@ section {
     }
 
     .project h2 {
-        color: white
+        color: var(--text-light)
     }
 
     .project h3 {
         margin: 0;
         text-align: center;
-        color: white
+        color: var(--text-light)
     }
 
     .project p {
@@ -143,11 +176,11 @@ section {
     }
 
     .project .tag-bubble {
-        background-color: #e0e0e0;
+        background-color: var(--accent);
         border-radius: 15px;
         padding: 3px 10px;
         font-size: 12px;
-        color: #333;
+        color: var(--text-dark);
     }
 
 @media (max-width: 768px) {
@@ -261,13 +294,14 @@ footer {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 14px;
-    transition: background-color 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 #tag-filter-toggle:hover {
     background-color: #333;
     border-color: #555;
+    color: var(--accent);
 }
 
 /* Tag filter dropdown */
@@ -310,20 +344,20 @@ footer {
 }
 
 #tag-filter .tag.active {
-    background-color: #0078d7;
+    background-color: var(--accent);
     color: white;
-    border-color: #005bb5;
+    border-color: #cc7a00;
 }
 
 /* Links */
 a:link {
-    color: #ff9800;
+    color: var(--accent);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:visited {
-    color: #9c27b0;
+    color: #b55bd4;
 }
 
 a:hover {

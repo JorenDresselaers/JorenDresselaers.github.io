@@ -6,7 +6,7 @@
         "title": "Project: Revibelize",
         "image": "/images/ProjectRevibelize.png",
         "description": "A student project made for the course Group Projects at DAE.",
-        "tags": ["Unity", "C#", "Gameplay", "Kinect", "XR"],
+        "tags": ["Unity", "C#", "Gameplay", "Kinect", "XR", "Multiplayer"],
         "date": "2024-06-01"
     },
     "generalInfo": {

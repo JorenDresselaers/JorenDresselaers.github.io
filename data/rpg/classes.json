@@ -1,0 +1,140 @@
+[
+  {
+    "id": "guardian",
+    "name": "Guardian of Aegis",
+    "description": "Stalwart defenders who weather the fiercest blows and retaliate with crushing force.",
+    "primaryStat": "strength",
+    "baseStats": {
+      "health": 140,
+      "mana": 50,
+      "strength": 12,
+      "agility": 6,
+      "intellect": 4
+    },
+    "statGrowth": {
+      "health": 22,
+      "mana": 6,
+      "strength": 3,
+      "agility": 1,
+      "intellect": 1
+    },
+    "abilities": [
+      {
+        "id": "shield_slam",
+        "name": "Shield Slam",
+        "type": "damage",
+        "resourceCost": 10,
+        "stat": "strength",
+        "multiplier": 1.5,
+        "flatBonus": 8,
+        "description": "A brutal bash that scales with Strength."
+      },
+      {
+        "id": "fortifying_roar",
+        "name": "Fortifying Roar",
+        "type": "heal",
+        "resourceCost": 15,
+        "stat": "strength",
+        "multiplier": 1.1,
+        "flatBonus": 10,
+        "description": "Rally your spirit to regain vitality before the next clash."
+      }
+    ],
+    "startingItems": [
+      "steel_bastard_sword",
+      "sturdy_shield"
+    ]
+  },
+  {
+    "id": "spellweaver",
+    "name": "Spellweaver",
+    "description": "Scholars of arcane energies who bend raw mana into devastating spells and protective wards.",
+    "primaryStat": "intellect",
+    "baseStats": {
+      "health": 100,
+      "mana": 120,
+      "strength": 4,
+      "agility": 6,
+      "intellect": 14
+    },
+    "statGrowth": {
+      "health": 14,
+      "mana": 20,
+      "strength": 1,
+      "agility": 2,
+      "intellect": 4
+    },
+    "abilities": [
+      {
+        "id": "arcane_bolt",
+        "name": "Arcane Bolt",
+        "type": "damage",
+        "resourceCost": 12,
+        "stat": "intellect",
+        "multiplier": 1.7,
+        "flatBonus": 5,
+        "description": "Unleash condensed arcane power at your foe."
+      },
+      {
+        "id": "mystic_barrier",
+        "name": "Mystic Barrier",
+        "type": "heal",
+        "resourceCost": 18,
+        "stat": "intellect",
+        "multiplier": 1.4,
+        "flatBonus": 12,
+        "description": "Transmute mana into a ward that mends your wounds."
+      }
+    ],
+    "startingItems": [
+      "apprentice_focus",
+      "spellthread_robe"
+    ]
+  },
+  {
+    "id": "shadowstalker",
+    "name": "Shadowstalker",
+    "description": "Masters of stealth and precision strikes who dance between the shadows and their prey.",
+    "primaryStat": "agility",
+    "baseStats": {
+      "health": 115,
+      "mana": 70,
+      "strength": 8,
+      "agility": 14,
+      "intellect": 5
+    },
+    "statGrowth": {
+      "health": 18,
+      "mana": 8,
+      "strength": 2,
+      "agility": 4,
+      "intellect": 1
+    },
+    "abilities": [
+      {
+        "id": "twin_fang",
+        "name": "Twin Fang",
+        "type": "damage",
+        "resourceCost": 8,
+        "stat": "agility",
+        "multiplier": 1.6,
+        "flatBonus": 6,
+        "description": "Strike twice in a blur, each cut deepened by Agility."
+      },
+      {
+        "id": "smoke_recovery",
+        "name": "Smoke Recovery",
+        "type": "heal",
+        "resourceCost": 12,
+        "stat": "agility",
+        "multiplier": 1.2,
+        "flatBonus": 9,
+        "description": "Vanish in smoke to bind your wounds before emerging."
+      }
+    ],
+    "startingItems": [
+      "twilight_twinblades",
+      "shadowguard_cloak"
+    ]
+  }
+]

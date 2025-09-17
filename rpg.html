@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legends of Azerai</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/scripts/header.js"></script>
+    <script defer src="scripts/rpg-game.js"></script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof loadHeader === 'function') {
+                loadHeader('header-placeholder');
+            }
+        });
+    </script>
+
+    <section class="rpg-section">
+        <h1>Legends of Azerai</h1>
+        <p class="intro">A data-driven text adventure inspired by classic fantasy RPGs. Expand the world by editing the JSON files inside <code>data/rpg</code>.</p>
+
+        <div class="rpg-layout">
+            <div class="rpg-panel">
+                <div class="rpg-card" id="setup-card">
+                    <h2>Character Setup</h2>
+                    <label for="player-name">Hero Name</label>
+                    <input type="text" id="player-name" placeholder="Optional">
+
+                    <label for="class-select">Class</label>
+                    <select id="class-select"></select>
+                    <div id="class-description" class="info-block"></div>
+
+                    <fieldset>
+                        <legend>Professions (choose up to 2)</legend>
+                        <div id="profession-options"></div>
+                    </fieldset>
+
+                    <button id="start-button">Start Adventure</button>
+                    <div id="setup-feedback" class="info-block"></div>
+                </div>
+
+                <div class="rpg-card" id="player-card">
+                    <h2>Adventurer Sheet</h2>
+                    <div id="player-info"></div>
+                    <div id="inventory-info"></div>
+                </div>
+
+                <div class="rpg-card" id="zone-card">
+                    <h2>World Explorer</h2>
+                    <label for="zone-select">Current Zone</label>
+                    <select id="zone-select"></select>
+                    <div id="zone-details" class="info-block"></div>
+                </div>
+            </div>
+
+            <div class="rpg-panel">
+                <div class="rpg-card log-card">
+                    <h2>Adventure Log</h2>
+                    <div id="log" class="log-window" aria-live="polite"></div>
+                </div>
+
+                <div class="rpg-card action-card">
+                    <h2>Actions</h2>
+                    <div class="button-row">
+                        <button id="explore-button" disabled>Explore</button>
+                        <button id="rest-button" disabled>Make Camp</button>
+                    </div>
+
+                    <div id="npc-controls" class="stacked-control hidden">
+                        <label for="npc-select">Speak with</label>
+                        <div class="inline-group">
+                            <select id="npc-select"></select>
+                            <button id="talk-npc-button" disabled>Talk</button>
+                        </div>
+                    </div>
+
+                    <div id="dungeon-controls" class="stacked-control hidden">
+                        <label for="dungeon-select">Dungeons</label>
+                        <div class="inline-group">
+                            <select id="dungeon-select"></select>
+                            <button id="enter-dungeon-button" disabled>Enter Dungeon</button>
+                        </div>
+                    </div>
+
+                    <div id="combat-controls" class="stacked-control hidden">
+                        <label for="ability-select">Combat Ability</label>
+                        <select id="ability-select"></select>
+                        <div id="ability-description" class="info-block"></div>
+                        <button id="use-ability-button">Use Ability</button>
+                        <div id="combat-status"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="rpg-footnote">Tip: Add new classes, enemies, or entire regions by updating the JSON files—no code changes required.</footer>
+    </section>
+</body>
+</html>

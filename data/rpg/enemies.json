@@ -1,0 +1,154 @@
+[
+  {
+    "id": "forest_wolf",
+    "name": "Forest Wolf",
+    "level": 1,
+    "health": 38,
+    "damage": { "min": 4, "max": 8 },
+    "xp": 24,
+    "habitats": ["verdant_frontier"],
+    "loot": [
+      { "itemId": "wolf_pelt", "chance": 0.6 },
+      { "itemId": "sunburst_bloom", "chance": 0.25 }
+    ]
+  },
+  {
+    "id": "thornlash_satyr",
+    "name": "Thornlash Satyr",
+    "level": 2,
+    "health": 52,
+    "damage": { "min": 6, "max": 11 },
+    "xp": 40,
+    "habitats": ["verdant_frontier"],
+    "loot": [
+      { "itemId": "luminous_cap", "chance": 0.45 },
+      { "itemId": "wolf_pelt", "chance": 0.35 }
+    ]
+  },
+  {
+    "id": "runebloom_sprite",
+    "name": "Runebloom Sprite",
+    "level": 3,
+    "health": 44,
+    "damage": { "min": 5, "max": 9 },
+    "xp": 46,
+    "habitats": ["verdant_frontier"],
+    "loot": [
+      { "itemId": "sunburst_bloom", "chance": 0.65 },
+      { "itemId": "lorekeepers_charm", "chance": 0.1 }
+    ]
+  },
+  {
+    "id": "ember_imp",
+    "name": "Ember Imp",
+    "level": 3,
+    "health": 58,
+    "damage": { "min": 7, "max": 13 },
+    "xp": 52,
+    "habitats": ["ashen_peaks"],
+    "loot": [
+      { "itemId": "smoldering_cinder", "chance": 0.7 }
+    ]
+  },
+  {
+    "id": "ashen_elemental",
+    "name": "Ashen Elemental",
+    "level": 4,
+    "health": 72,
+    "damage": { "min": 9, "max": 16 },
+    "xp": 72,
+    "habitats": ["ashen_peaks"],
+    "loot": [
+      { "itemId": "molten_ore", "chance": 0.5 },
+      { "itemId": "smoldering_cinder", "chance": 0.4 }
+    ]
+  },
+  {
+    "id": "slag_titan",
+    "name": "Slag Titan",
+    "level": 5,
+    "health": 110,
+    "damage": { "min": 12, "max": 20 },
+    "xp": 110,
+    "habitats": ["ashen_peaks"],
+    "loot": [
+      { "itemId": "molten_ore", "chance": 0.65 },
+      { "itemId": "emberforged_plating", "chance": 0.08 }
+    ]
+  },
+  {
+    "id": "mist_wraith",
+    "name": "Mist Wraith",
+    "level": 4,
+    "health": 70,
+    "damage": { "min": 8, "max": 15 },
+    "xp": 68,
+    "habitats": ["mists_end"],
+    "loot": [
+      { "itemId": "veilstone_shard", "chance": 0.3 },
+      { "itemId": "scrying_sigil", "chance": 0.05 }
+    ]
+  },
+  {
+    "id": "drowned_corsair",
+    "name": "Drowned Corsair",
+    "level": 5,
+    "health": 90,
+    "damage": { "min": 11, "max": 19 },
+    "xp": 95,
+    "habitats": ["mists_end"],
+    "loot": [
+      { "itemId": "veilstone_shard", "chance": 0.4 },
+      { "itemId": "wolf_pelt", "chance": 0.15 }
+    ]
+  },
+  {
+    "id": "veilwing_matriarch",
+    "name": "Veilwing Matriarch",
+    "level": 6,
+    "health": 120,
+    "damage": { "min": 13, "max": 22 },
+    "xp": 132,
+    "habitats": ["mists_end"],
+    "loot": [
+      { "itemId": "veilstone_shard", "chance": 0.55 },
+      { "itemId": "siren_song_shell", "chance": 0.12 }
+    ]
+  },
+  {
+    "id": "ancient_treant",
+    "name": "Ancient Treant",
+    "level": 7,
+    "health": 180,
+    "damage": { "min": 15, "max": 24 },
+    "xp": 200,
+    "habitats": ["heart_of_the_grove"],
+    "loot": [
+      { "itemId": "ancient_bark_amulet", "chance": 0.9 }
+    ]
+  },
+  {
+    "id": "magma_lord",
+    "name": "Magma Lord",
+    "level": 8,
+    "health": 210,
+    "damage": { "min": 18, "max": 28 },
+    "xp": 240,
+    "habitats": ["smoldering_core"],
+    "loot": [
+      { "itemId": "emberforged_plating", "chance": 0.85 }
+    ]
+  },
+  {
+    "id": "mist_sovereign",
+    "name": "Mist Sovereign",
+    "level": 9,
+    "health": 240,
+    "damage": { "min": 20, "max": 32 },
+    "xp": 280,
+    "habitats": ["citadel_of_mists"],
+    "loot": [
+      { "itemId": "siren_song_shell", "chance": 0.88 }
+    ]
+  }
+]

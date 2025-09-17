@@ -1,0 +1,80 @@
+[
+  {
+    "id": "verdant_frontier",
+    "name": "Verdant Frontier",
+    "description": "Ancient woods bordering the capital, alive with whispering spirits and prowling beasts.",
+    "recommendedLevel": 1,
+    "enemies": ["forest_wolf", "thornlash_satyr", "runebloom_sprite"],
+    "npcs": ["elyra_moonwhisper"],
+    "dungeons": ["heart_of_the_grove"],
+    "gatherables": [
+      {
+        "professionId": "herbalism",
+        "itemId": "sunburst_bloom",
+        "minQuantity": 1,
+        "maxQuantity": 2
+      },
+      {
+        "professionId": "herbalism",
+        "itemId": "luminous_cap",
+        "minQuantity": 1,
+        "maxQuantity": 3
+      }
+    ],
+    "ambientLore": [
+      "A gentle breeze carries motes of emerald light between the boughs.",
+      "Distant drums echo—tribes of satyrs practicing their war songs.",
+      "Runes etched into bark flare briefly as you pass, recognizing your presence."
+    ]
+  },
+  {
+    "id": "ashen_peaks",
+    "name": "Ashen Peaks",
+    "description": "Volcanic highlands where rivers of magma carve paths through blackened stone.",
+    "recommendedLevel": 3,
+    "enemies": ["ember_imp", "ashen_elemental", "slag_titan"],
+    "npcs": ["talan_forgeborne"],
+    "dungeons": ["smoldering_core"],
+    "gatherables": [
+      {
+        "professionId": "mining",
+        "itemId": "molten_ore",
+        "minQuantity": 1,
+        "maxQuantity": 2
+      },
+      {
+        "professionId": "mining",
+        "itemId": "smoldering_cinder",
+        "minQuantity": 1,
+        "maxQuantity": 2
+      }
+    ],
+    "ambientLore": [
+      "Geysers of ash erupt in the distance, briefly obscuring the twin moons.",
+      "A river of lava pulses like a heartbeat, lighting the crags blood-red.",
+      "Smiths whisper of a dragon that once slept beneath these mountains."
+    ]
+  },
+  {
+    "id": "mists_end",
+    "name": "Mist's End",
+    "description": "A drowned coastline where spectral fog wraps shattered fortresses in silence.",
+    "recommendedLevel": 5,
+    "enemies": ["mist_wraith", "drowned_corsair", "veilwing_matriarch"],
+    "npcs": ["seer_kaldra"],
+    "dungeons": ["citadel_of_mists"],
+    "gatherables": [
+      {
+        "professionId": "rune_scribing",
+        "itemId": "veilstone_shard",
+        "minQuantity": 1,
+        "maxQuantity": 1
+      }
+    ],
+    "ambientLore": [
+      "Spectral bells toll from beneath the tide, beckoning sailors long gone.",
+      "The mist parts to reveal silhouettes of towers swallowed by the sea.",
+      "An otherworldly chorus echoes across the surf before fading into a hush."
+    ]
+  }
+]

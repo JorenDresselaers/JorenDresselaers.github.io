@@ -1,0 +1,43 @@
+[
+  {
+    "id": "herbalism",
+    "name": "Herbalism",
+    "description": "Study the flora of Azerai, harvesting potent herbs for salves and spell-inks.",
+    "gathering": [
+      {
+        "itemId": "sunburst_bloom",
+        "notes": "Key ingredient for radiant elixirs."
+      },
+      {
+        "itemId": "luminous_cap",
+        "notes": "Fungal spores perfect for restorative draughts."
+      }
+    ]
+  },
+  {
+    "id": "mining",
+    "name": "Mining",
+    "description": "Extract rare metals and minerals from the bones of the world.",
+    "gathering": [
+      {
+        "itemId": "molten_ore",
+        "notes": "Smelted into arms for the bravest champions."
+      },
+      {
+        "itemId": "smoldering_cinder",
+        "notes": "A common byproduct still prized by smiths."
+      }
+    ]
+  },
+  {
+    "id": "rune_scribing",
+    "name": "Rune Scribing",
+    "description": "Shape arcane scripts and sigils from crystalline remnants.",
+    "gathering": [
+      {
+        "itemId": "veilstone_shard",
+        "notes": "Channels the tides of magic into lasting enchantments."
+      }
+    ]
+  }
+]

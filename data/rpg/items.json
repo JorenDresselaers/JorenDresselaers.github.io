@@ -1,0 +1,173 @@
+[
+  {
+    "id": "steel_bastard_sword",
+    "name": "Steel Bastard Sword",
+    "type": "weapon",
+    "rarity": "uncommon",
+    "description": "A balanced blade favored by defenders who must strike back while holding the line.",
+    "value": 45,
+    "effects": {
+      "strengthBonus": 2
+    }
+  },
+  {
+    "id": "sturdy_shield",
+    "name": "Sturdy Shield",
+    "type": "armor",
+    "rarity": "common",
+    "description": "Solid oak reinforced with iron bands. Reliable and heavy.",
+    "value": 30,
+    "effects": {
+      "healthBonus": 15
+    }
+  },
+  {
+    "id": "apprentice_focus",
+    "name": "Apprentice's Focus",
+    "type": "weapon",
+    "rarity": "uncommon",
+    "description": "A crystal focus etched with beginner incantations that steady the mind.",
+    "value": 38,
+    "effects": {
+      "intellectBonus": 3
+    }
+  },
+  {
+    "id": "spellthread_robe",
+    "name": "Spellthread Robe",
+    "type": "armor",
+    "rarity": "common",
+    "description": "Robes woven with silvered thread that hum softly with stored mana.",
+    "value": 28,
+    "effects": {
+      "manaBonus": 20
+    }
+  },
+  {
+    "id": "twilight_twinblades",
+    "name": "Twilight Twinblades",
+    "type": "weapon",
+    "rarity": "rare",
+    "description": "Paired daggers that drink in light and release it as lethal momentum.",
+    "value": 52,
+    "effects": {
+      "agilityBonus": 3
+    }
+  },
+  {
+    "id": "shadowguard_cloak",
+    "name": "Shadowguard Cloak",
+    "type": "armor",
+    "rarity": "uncommon",
+    "description": "A cloak treated with whispering dyes that blur the wearer's outline.",
+    "value": 34,
+    "effects": {
+      "evasionBonus": 5
+    }
+  },
+  {
+    "id": "wolf_pelt",
+    "name": "Wolf Pelt",
+    "type": "crafting",
+    "rarity": "common",
+    "description": "A thick pelt from a forest wolf, still warm to the touch.",
+    "value": 8
+  },
+  {
+    "id": "sunburst_bloom",
+    "name": "Sunburst Bloom",
+    "type": "reagent",
+    "rarity": "uncommon",
+    "description": "A radiant flower that stores sunlight in its petals.",
+    "value": 16
+  },
+  {
+    "id": "luminous_cap",
+    "name": "Luminous Cap",
+    "type": "reagent",
+    "rarity": "common",
+    "description": "A glowcap mushroom used to brew restorative tonics.",
+    "value": 10
+  },
+  {
+    "id": "molten_ore",
+    "name": "Molten Ore",
+    "type": "crafting",
+    "rarity": "uncommon",
+    "description": "Chunks of ore that radiate residual volcanic heat.",
+    "value": 22
+  },
+  {
+    "id": "smoldering_cinder",
+    "name": "Smoldering Cinder",
+    "type": "reagent",
+    "rarity": "common",
+    "description": "An ember that refuses to cool, coveted by fire-smiths.",
+    "value": 12
+  },
+  {
+    "id": "veilstone_shard",
+    "name": "Veilstone Shard",
+    "type": "crafting",
+    "rarity": "rare",
+    "description": "A crystalline fragment that resonates with the echo of the sea.",
+    "value": 35
+  },
+  {
+    "id": "ancient_bark_amulet",
+    "name": "Ancient Bark Amulet",
+    "type": "trinket",
+    "rarity": "rare",
+    "description": "A talisman carved from the Heartwood, blessing the wearer with endurance.",
+    "value": 60,
+    "effects": {
+      "healthBonus": 20
+    }
+  },
+  {
+    "id": "emberforged_plating",
+    "name": "Emberforged Plating",
+    "type": "trinket",
+    "rarity": "epic",
+    "description": "Plate segments quenched in dragonfire that harden under stress.",
+    "value": 80,
+    "effects": {
+      "strengthBonus": 3
+    }
+  },
+  {
+    "id": "siren_song_shell",
+    "name": "Siren Song Shell",
+    "type": "trinket",
+    "rarity": "epic",
+    "description": "A conch that hums with foresight, guiding spellcraft with gentle whispers.",
+    "value": 85,
+    "effects": {
+      "intellectBonus": 4
+    }
+  },
+  {
+    "id": "lorekeepers_charm",
+    "name": "Lorekeeper's Charm",
+    "type": "trinket",
+    "rarity": "uncommon",
+    "description": "Charm of polished amber that glows when secrets are near.",
+    "value": 28
+  },
+  {
+    "id": "tempered_bracelets",
+    "name": "Tempered Bracelets",
+    "type": "trinket",
+    "rarity": "uncommon",
+    "description": "Metalwork that stores latent heat, warming the wearer before a fight.",
+    "value": 32
+  },
+  {
+    "id": "scrying_sigil",
+    "name": "Scrying Sigil",
+    "type": "trinket",
+    "rarity": "rare",
+    "description": "An etched stone that pulses when danger approaches.",
+    "value": 48
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "heart_of_the_grove",
+    "name": "Heart of the Grove",
+    "zoneId": "verdant_frontier",
+    "description": "Delve into the ancient heartwood and calm the fury of the forest guardian.",
+    "recommendedLevel": 2,
+    "encounters": ["forest_wolf", "thornlash_satyr", "runebloom_sprite"],
+    "boss": "ancient_treant",
+    "rewards": ["ancient_bark_amulet"]
+  },
+  {
+    "id": "smoldering_core",
+    "name": "Smoldering Core",
+    "zoneId": "ashen_peaks",
+    "description": "Descend into the volcano's heart where molten elementals plot a fiery rebirth.",
+    "recommendedLevel": 4,
+    "encounters": ["ember_imp", "ashen_elemental", "slag_titan"],
+    "boss": "magma_lord",
+    "rewards": ["emberforged_plating"]
+  },
+  {
+    "id": "citadel_of_mists",
+    "name": "Citadel of Mists",
+    "zoneId": "mists_end",
+    "description": "Navigate the drowned battlements to confront the sovereign that commands the tides.",
+    "recommendedLevel": 6,
+    "encounters": ["mist_wraith", "drowned_corsair", "veilwing_matriarch"],
+    "boss": "mist_sovereign",
+    "rewards": ["siren_song_shell"]
+  }
+]

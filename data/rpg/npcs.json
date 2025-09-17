@@ -1,0 +1,62 @@
+[
+  {
+    "id": "elyra_moonwhisper",
+    "name": "Elyra Moonwhisper",
+    "zoneId": "verdant_frontier",
+    "role": "Lorekeeper",
+    "description": "A night elf scholar cataloguing the ever-shifting runes of the frontier.",
+    "dialogue": [
+      "Every leaf carries a chronicle. Listen, and the forest will speak.",
+      "Guardians once patrolled these woods. Their spirits still watch for worthy heirs.",
+      "If you seek peace, you must first soothe the hearts of the satyrs."
+    ],
+    "rewards": [
+      {
+        "itemId": "lorekeepers_charm",
+        "description": "Elyra presses a warm charm into your palm.",
+        "once": true
+      }
+    ],
+    "teachesProfessions": ["herbalism"]
+  },
+  {
+    "id": "talan_forgeborne",
+    "name": "Talan Forgeborn",
+    "zoneId": "ashen_peaks",
+    "role": "Battlesmith",
+    "description": "A dwarf whose forge sits perilously close to flowing magma.",
+    "dialogue": [
+      "Feel that tremor? The mountain's heart is restless tonight.",
+      "Bring me ore that still smokes and I'll temper you gear fit for heroes.",
+      "I've seen imps swarm like sparks. Keep your shield high and your courage higher."
+    ],
+    "rewards": [
+      {
+        "itemId": "tempered_bracelets",
+        "description": "Talan clasps heated bracelets around your wrists.",
+        "once": true
+      }
+    ],
+    "teachesProfessions": ["mining"]
+  },
+  {
+    "id": "seer_kaldra",
+    "name": "Seer Kaldra",
+    "zoneId": "mists_end",
+    "role": "Tide Seer",
+    "description": "An orc seer who reads the future in the ebb and flow of spectral tides.",
+    "dialogue": [
+      "The mists remember those who were lost—and those yet to fall.",
+      "Every tide carries whispers from realms beyond the veil.",
+      "Trust the rhythm of the waves. They warn before the Sovereign strikes."
+    ],
+    "rewards": [
+      {
+        "itemId": "scrying_sigil",
+        "description": "Kaldra inscribes a sigil on smooth stone and gifts it to you.",
+        "once": true
+      }
+    ],
+    "teachesProfessions": ["rune_scribing"]
+  }
+]
